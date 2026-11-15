@@ -1,0 +1,1109 @@
+{
+  "source": "Ecommerce_Delivery_Analysis.xlsx",
+  "sha256": "659669b7e7a8d0b873de7ea9241efb5ba186113010bd8c4fe02f62d1fb7e651d",
+  "sheets": [
+    {
+      "name": "Orders",
+      "dimension": "A1:K99442",
+      "rows_with_cells": 99442,
+      "formula_cells": 198882,
+      "first_rows": [
+        {
+          "A1": {
+            "value": "order_id",
+            "stored_type": "s",
+            "formula": null
+          },
+          "B1": {
+            "value": "customer_id",
+            "stored_type": "s",
+            "formula": null
+          },
+          "C1": {
+            "value": "order_status",
+            "stored_type": "s",
+            "formula": null
+          },
+          "D1": {
+            "value": "order_purchase_timestamp",
+            "stored_type": "s",
+            "formula": null
+          },
+          "E1": {
+            "value": "order_approved_at",
+            "stored_type": "s",
+            "formula": null
+          },
+          "F1": {
+            "value": "order_delivered_carrier_date",
+            "stored_type": "s",
+            "formula": null
+          },
+          "G1": {
+            "value": "order_delivered_customer_date",
+            "stored_type": "s",
+            "formula": null
+          },
+          "H1": {
+            "value": "order_estimated_delivery_date",
+            "stored_type": "s",
+            "formula": null
+          },
+          "I1": {
+            "value": "Delivery Status",
+            "stored_type": "s",
+            "formula": null
+          },
+          "J1": {
+            "value": "Days Late",
+            "stored_type": "s",
+            "formula": null
+          },
+          "K1": {
+            "value": "Review_Score",
+            "stored_type": "s",
+            "formula": null
+          }
+        },
+        {
+          "A2": {
+            "value": "e481f51cbdc54678b7cc49136f2d6af7",
+            "stored_type": "s",
+            "formula": null
+          },
+          "B2": {
+            "value": "9ef432eb6251297304e76186b10a928d",
+            "stored_type": "s",
+            "formula": null
+          },
+          "C2": {
+            "value": "delivered",
+            "stored_type": "s",
+            "formula": null
+          },
+          "D2": {
+            "value": "2017-10-02T10:56:33.00000022631138775",
+            "stored_type": "d",
+            "formula": null
+          },
+          "E2": {
+            "value": "2017-10-02T11:07:15.00000005587935450",
+            "stored_type": "d",
+            "formula": null
+          },
+          "F2": {
+            "value": "2017-10-04T19:54:59.99999986030161375",
+            "stored_type": "d",
+            "formula": null
+          },
+          "G2": {
+            "value": "2017-10-10T21:25:12.99999975599348625",
+            "stored_type": "d",
+            "formula": null
+          },
+          "H2": {
+            "value": "2017-10-18",
+            "stored_type": "d",
+            "formula": null
+          },
+          "I2": {
+            "value": "On time",
+            "stored_type": "str",
+            "formula": "IF(OR(OrdersData[[#This Row],[order_delivered_customer_date]]=\"\",OrdersData[[#This Row],[order_estimated_delivery_date]]=\"\"),\"Missing date\",IF(INT(OrdersData[[#This Row],[order_delivered_customer_date]])>INT(OrdersData[[#This Row],[order_estimated_delivery_date]]),\"Late\",\"On time\"))"
+          },
+          "J2": {
+            "value": "1899-12-30",
+            "stored_type": "d",
+            "formula": "IF(OR(OrdersData[[#This Row],[order_delivered_customer_date]]=\"\",OrdersData[[#This Row],[order_estimated_delivery_date]]=\"\"),\"\",MAX(0,INT(OrdersData[[#This Row],[order_delivered_customer_date]])-INT(OrdersData[[#This Row],[order_estimated_delivery_date]])))"
+          },
+          "K2": {
+            "value": "=COUNTIF(ReviewsData[order_id],[@order_id])",
+            "stored_type": "s",
+            "formula": null
+          }
+        },
+        {
+          "A3": {
+            "value": "53cdb2fc8bc7dce0b6741e2150273451",
+            "stored_type": "s",
+            "formula": null
+          },
+          "B3": {
+            "value": "b0830fb4747a6c6d20dea0b8c802d7ef",
+            "stored_type": "s",
+            "formula": null
+          },
+          "C3": {
+            "value": "delivered",
+            "stored_type": "s",
+            "formula": null
+          },
+          "D3": {
+            "value": "2018-07-24T20:41:36.999999904073775",
+            "stored_type": "d",
+            "formula": null
+          },
+          "E3": {
+            "value": "2018-07-26T03:24:26.99999968986958050",
+            "stored_type": "d",
+            "formula": null
+          },
+          "F3": {
+            "value": "2018-07-26T14:30:59.99999998603016475",
+            "stored_type": "d",
+            "formula": null
+          },
+          "G3": {
+            "value": "2018-08-07T15:27:45.00000008381903175",
+            "stored_type": "d",
+            "formula": null
+          },
+          "H3": {
+            "value": "2018-08-13",
+            "stored_type": "d",
+            "formula": null
+          },
+          "I3": {
+            "value": "On time",
+            "stored_type": "str",
+            "formula": "IF(OR(OrdersData[[#This Row],[order_delivered_customer_date]]=\"\",OrdersData[[#This Row],[order_estimated_delivery_date]]=\"\"),\"Missing date\",IF(INT(OrdersData[[#This Row],[order_delivered_customer_date]])>INT(OrdersData[[#This Row],[order_estimated_delivery_date]]),\"Late\",\"On time\"))"
+          },
+          "J3": {
+            "value": "1899-12-30",
+            "stored_type": "d",
+            "formula": "IF(OR(OrdersData[[#This Row],[order_delivered_customer_date]]=\"\",OrdersData[[#This Row],[order_estimated_delivery_date]]=\"\"),\"\",MAX(0,INT(OrdersData[[#This Row],[order_delivered_customer_date]])-INT(OrdersData[[#This Row],[order_estimated_delivery_date]])))"
+          },
+          "K3": {
+            "value": "",
+            "stored_type": "n",
+            "formula": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reviews",
+      "dimension": "A1:G99225",
+      "rows_with_cells": 99225,
+      "formula_cells": 4,
+      "first_rows": [
+        {
+          "A1": {
+            "value": "review_id",
+            "stored_type": "s",
+            "formula": null
+          },
+          "B1": {
+            "value": "order_id",
+            "stored_type": "s",
+            "formula": null
+          },
+          "C1": {
+            "value": "review_score",
+            "stored_type": "s",
+            "formula": null
+          },
+          "D1": {
+            "value": "review_comment_title",
+            "stored_type": "s",
+            "formula": null
+          },
+          "E1": {
+            "value": "review_comment_message",
+            "stored_type": "s",
+            "formula": null
+          },
+          "F1": {
+            "value": "review_creation_date",
+            "stored_type": "s",
+            "formula": null
+          },
+          "G1": {
+            "value": "review_answer_timestamp",
+            "stored_type": "s",
+            "formula": null
+          }
+        },
+        {
+          "A2": {
+            "value": "7bc2406110b926393aa56f80a40eba40",
+            "stored_type": "s",
+            "formula": null
+          },
+          "B2": {
+            "value": "73fc7af87114b39712e6da79b0a377eb",
+            "stored_type": "s",
+            "formula": null
+          },
+          "C2": {
+            "value": "4",
+            "stored_type": "n",
+            "formula": null
+          },
+          "F2": {
+            "value": "2018-01-18",
+            "stored_type": "d",
+            "formula": null
+          },
+          "G2": {
+            "value": "2018-01-18T21:46:59.00000015739351225",
+            "stored_type": "d",
+            "formula": null
+          }
+        },
+        {
+          "A3": {
+            "value": "80e641a11e56f04c1ad469d5645fdfde",
+            "stored_type": "s",
+            "formula": null
+          },
+          "B3": {
+            "value": "a548910a1c6147796b98fdf73dbeba33",
+            "stored_type": "s",
+            "formula": null
+          },
+          "C3": {
+            "value": "5",
+            "stored_type": "n",
+            "formula": null
+          },
+          "F3": {
+            "value": "2018-03-10",
+            "stored_type": "d",
+            "formula": null
+          },
+          "G3": {
+            "value": "2018-03-11T03:05:13.00000024493783475",
+            "stored_type": "d",
+            "formula": null
+          }
+        }
+      ]
+    }
+  ],
+  "objects": {
+    "tables": [
+      "xl/tables/table1.xml",
+      "xl/tables/table2.xml"
+    ],
+    "charts": [],
+    "pivot_tables": []
+  },
+  "order_profile": {
+    "data_rows": 99441,
+    "distinct_nonblank_order_ids": 99441,
+    "missing_order_ids": 0,
+    "order_ids_appearing_more_than_once": 0,
+    "duplicate_excess_rows": 0,
+    "status_counts": {
+      "approved": 2,
+      "canceled": 625,
+      "created": 5,
+      "delivered": 96478,
+      "invoiced": 314,
+      "processing": 301,
+      "shipped": 1107,
+      "unavailable": 609
+    },
+    "delivered_date_coverage": {
+      "actual_missing": 8,
+      "both_present": 96470
+    },
+    "limitations": [
+      "Date presence only; validity and chronological consistency not yet checked.",
+      "Order IDs and statuses are whitespace-trimmed for profiling only.",
+      "All stored rows are read, including rows hidden by Excel filters."
+    ]
+  },
+  "delivery_kpi": {
+    "population": "Orders with status delivered and parseable actual and estimated dates",
+    "late_definition": "Actual calendar date is after estimated calendar date; same day is on time",
+    "counts": {
+      "Late": 6534,
+      "On time": 89936,
+      "unknown_missing_dates": 8
+    },
+    "assessed_delivered_orders": 96470,
+    "late_rate": 0.06773090079817559,
+    "assessment_coverage": 0.9999170795414498,
+    "calendar_days_late_total": 69392,
+    "saved_delivery_status_comparison": {
+      "match": 96470
+    },
+    "chronology_checks": {
+      "actual_on_or_after_purchase": 96470,
+      "promised_on_or_after_purchase": 96470
+    },
+    "limitations": [
+      "Descriptive rate for this saved dataset, not proof of causes or current performance.",
+      "Saved Excel labels were compared, not recalculated in Excel.",
+      "Dates use the source calendar with no timezone conversion."
+    ]
+  },
+  "delay_severity": {
+    "population": "Assessed delivered orders with strictly positive calendar days late",
+    "late_orders": 6534,
+    "mean_days_late": 10.620140801958984,
+    "median_days_late": 7.0,
+    "p90_days_late": 22,
+    "p90_method": "Nearest rank: sorted value at ceiling(0.90 * n), using one-based positions",
+    "min_days_late": 1,
+    "max_days_late": 188,
+    "delay_bands": [
+      {
+        "band": "1\u20133 days",
+        "orders": 1870,
+        "share_of_late_orders": 0.28619528619528617
+      },
+      {
+        "band": "4\u20137 days",
+        "orders": 1802,
+        "share_of_late_orders": 0.27578818487909396
+      },
+      {
+        "band": "8\u201314 days",
+        "orders": 1478,
+        "share_of_late_orders": 0.22620140801958985
+      },
+      {
+        "band": "15\u201330 days",
+        "orders": 1039,
+        "share_of_late_orders": 0.15901438628711356
+      },
+      {
+        "band": "31+ days",
+        "orders": 345,
+        "share_of_late_orders": 0.052800734618916434
+      }
+    ],
+    "band_note": "Exploratory calendar-day bands, not agreed company service thresholds",
+    "limitations": [
+      "Extreme delays retained; valid date parsing does not verify business accuracy.",
+      "Severity describes late orders only, excluding on-time and unknown orders."
+    ]
+  },
+  "review_linkage_profile": {
+    "review_rows": 99224,
+    "distinct_nonblank_review_ids": 98410,
+    "missing_review_ids": 0,
+    "repeated_review_ids": 789,
+    "distinct_nonblank_order_ids_in_reviews": 98673,
+    "missing_order_ids": 0,
+    "review_rows_with_unmatched_nonblank_order_id": 0,
+    "orders_with_multiple_review_rows": 547,
+    "orders_with_multiple_distinct_score_values": 202,
+    "maximum_review_rows_per_order": 3,
+    "score_value_counts": {
+      "1": 11424,
+      "2": 3151,
+      "3": 8179,
+      "4": 19142,
+      "5": 57328
+    },
+    "late_order_review_coverage": {
+      "no_review": 153,
+      "one_review": 6353,
+      "multiple_reviews": 28
+    },
+    "late_order_rows_after_unaggregated_left_join": 6562,
+    "limitations": [
+      "No review deduplication or order-level score rule has been selected.",
+      "Review dates relative to delivery have not yet been validated.",
+      "Repeated review IDs are not necessarily identical records."
+    ]
+  },
+  "latest_review_audit": {
+    "working_timestamp": "review_answer_timestamp (column G), interpreted as the recorded review response time",
+    "timestamp_precision": "Python datetime microseconds; source fractional digits beyond microseconds are truncated",
+    "exact_duplicate_excess_rows_all_seven_stored_fields": 0,
+    "timestamp_quality": {
+      "valid_answer_timestamp": 99224
+    },
+    "order_selection": {
+      "orders_with_selected_score": 98673
+    },
+    "late_order_selection_and_timing": {
+      "selected_latest_review": 6381,
+      "before_delivery_day": 4086,
+      "on_delivery_day": 576,
+      "after_delivery_day": 1719,
+      "no_review": 153
+    },
+    "pre_delivery_examples": [
+      {
+        "order_id": "203096f03d82e0dffbc41ebc2e2bcfb7",
+        "orders_excel_row": 22,
+        "reviews_excel_row": 34819,
+        "answer_timestamp": "2017-10-01T17:55:21.00000015925616100",
+        "actual_delivery": "2017-10-09T22:23:45.99999995436519675",
+        "score": "2"
+      },
+      {
+        "order_id": "fbf9ac61453ac646ce8ad9783d7d0af6",
+        "orders_excel_row": 27,
+        "reviews_excel_row": 27978,
+        "answer_timestamp": "2018-03-20T23:10:58.00000000745058150",
+        "actual_delivery": "2018-03-21T22:03:53.99999979883432650",
+        "score": "2"
+      },
+      {
+        "order_id": "a685d016c8a26f71a0bb67821070e398",
+        "orders_excel_row": 60,
+        "reviews_excel_row": 64048,
+        "answer_timestamp": "2017-04-02T10:58:37.99999990034848425",
+        "actual_delivery": "2017-04-06T13:37:16.00000008009374100",
+        "score": "1"
+      }
+    ],
+    "rules": [
+      "If any answer timestamp is invalid/missing, leave that order unresolved.",
+      "Latest timestamp ties with conflicting scores remain unresolved.",
+      "Equal-time/equal-score ties use review ID then source row for provenance only.",
+      "Timing groups compare calendar days; same-day timing is not treated as proven post-delivery.",
+      "No review timing exclusions applied and no association estimate calculated yet."
+    ]
+  },
+  "post_delivery_score_comparison": {
+    "population": "Late delivered orders with a valid latest score recorded strictly after actual delivery calendar day",
+    "eligibility_counts": {
+      "latest_response_on_or_before_delivery_day": 4662,
+      "included": 1719,
+      "no_review_or_unresolved": 153
+    },
+    "bands": [
+      {
+        "delay_band": "1\u20133 days",
+        "all_late_orders": 1870,
+        "eligible_reviewed_orders": 1339,
+        "eligible_share_of_band": 0.7160427807486631,
+        "mean_score": 3.7610156833457804,
+        "median_score": 4,
+        "score_counts": {
+          "1": 167,
+          "2": 78,
+          "3": 213,
+          "4": 331,
+          "5": 550
+        }
+      },
+      {
+        "delay_band": "4\u20137 days",
+        "all_late_orders": 1802,
+        "eligible_reviewed_orders": 323,
+        "eligible_share_of_band": 0.1792452830188679,
+        "mean_score": 3.789473684210526,
+        "median_score": 4,
+        "score_counts": {
+          "1": 38,
+          "2": 20,
+          "3": 52,
+          "4": 75,
+          "5": 138
+        }
+      },
+      {
+        "delay_band": "8\u201314 days",
+        "all_late_orders": 1478,
+        "eligible_reviewed_orders": 40,
+        "eligible_share_of_band": 0.02706359945872801,
+        "mean_score": 3.525,
+        "median_score": 4.0,
+        "score_counts": {
+          "1": 9,
+          "2": 2,
+          "3": 4,
+          "4": 9,
+          "5": 16
+        }
+      },
+      {
+        "delay_band": "15\u201330 days",
+        "all_late_orders": 1039,
+        "eligible_reviewed_orders": 11,
+        "eligible_share_of_band": 0.010587102983638113,
+        "mean_score": 3.3636363636363638,
+        "median_score": 3,
+        "score_counts": {
+          "1": 1,
+          "2": 2,
+          "3": 3,
+          "4": 2,
+          "5": 3
+        }
+      },
+      {
+        "delay_band": "31+ days",
+        "all_late_orders": 345,
+        "eligible_reviewed_orders": 6,
+        "eligible_share_of_band": 0.017391304347826087,
+        "mean_score": 2,
+        "median_score": 1.0,
+        "score_counts": {
+          "1": 4,
+          "2": 0,
+          "3": 1,
+          "4": 0,
+          "5": 1
+        }
+      }
+    ],
+    "limitations": [
+      "Excludes same-day and pre-delivery reviews, unknown dates and non-late orders.",
+      "Eligibility may differ with delay length; these groups may be selectively reviewed.",
+      "Mean scores treat the steps between integer ratings as equally spaced.",
+      "Association is descriptive, unadjusted and does not establish causation."
+    ]
+  },
+  "review_timing_sensitivity": {
+    "status": "Sensitivity comparison; primary analysis remains strictly after delivery day",
+    "included_all_latest_orders": 6381,
+    "exclusions": {
+      "no_review_or_unresolved": 153
+    },
+    "bands": [
+      {
+        "delay_band": "1\u20133 days",
+        "all_late_orders": 1870,
+        "review_timing_groups": {
+          "before_delivery_day": {
+            "orders": 205,
+            "coverage_of_all_late_orders_in_band": 0.10962566844919786,
+            "mean_score": 1.5414634146341464,
+            "median_score": 1,
+            "score_counts": {
+              "1": 150,
+              "2": 25,
+              "3": 13,
+              "4": 8,
+              "5": 9
+            }
+          },
+          "on_delivery_day": {
+            "orders": 308,
+            "coverage_of_all_late_orders_in_band": 0.16470588235294117,
+            "mean_score": 2.4123376623376624,
+            "median_score": 2.0,
+            "score_counts": {
+              "1": 148,
+              "2": 27,
+              "3": 46,
+              "4": 32,
+              "5": 55
+            }
+          },
+          "after_delivery_day": {
+            "orders": 1339,
+            "coverage_of_all_late_orders_in_band": 0.7160427807486631,
+            "mean_score": 3.7610156833457804,
+            "median_score": 4,
+            "score_counts": {
+              "1": 167,
+              "2": 78,
+              "3": 213,
+              "4": 331,
+              "5": 550
+            }
+          },
+          "all_latest_reviews": {
+            "orders": 1852,
+            "coverage_of_all_late_orders_in_band": 0.9903743315508021,
+            "mean_score": 3.291036717062635,
+            "median_score": 4.0,
+            "score_counts": {
+              "1": 465,
+              "2": 130,
+              "3": 272,
+              "4": 371,
+              "5": 614
+            }
+          }
+        }
+      },
+      {
+        "delay_band": "4\u20137 days",
+        "all_late_orders": 1802,
+        "review_timing_groups": {
+          "before_delivery_day": {
+            "orders": 1196,
+            "coverage_of_all_late_orders_in_band": 0.6637069922308546,
+            "mean_score": 1.6036789297658862,
+            "median_score": 1.0,
+            "score_counts": {
+              "1": 864,
+              "2": 125,
+              "3": 92,
+              "4": 47,
+              "5": 68
+            }
+          },
+          "on_delivery_day": {
+            "orders": 229,
+            "coverage_of_all_late_orders_in_band": 0.12708102108768035,
+            "mean_score": 2.331877729257642,
+            "median_score": 1,
+            "score_counts": {
+              "1": 122,
+              "2": 14,
+              "3": 28,
+              "4": 25,
+              "5": 40
+            }
+          },
+          "after_delivery_day": {
+            "orders": 323,
+            "coverage_of_all_late_orders_in_band": 0.1792452830188679,
+            "mean_score": 3.789473684210526,
+            "median_score": 4,
+            "score_counts": {
+              "1": 38,
+              "2": 20,
+              "3": 52,
+              "4": 75,
+              "5": 138
+            }
+          },
+          "all_latest_reviews": {
+            "orders": 1748,
+            "coverage_of_all_late_orders_in_band": 0.9700332963374029,
+            "mean_score": 2.102974828375286,
+            "median_score": 1.0,
+            "score_counts": {
+              "1": 1024,
+              "2": 159,
+              "3": 172,
+              "4": 147,
+              "5": 246
+            }
+          }
+        }
+      },
+      {
+        "delay_band": "8\u201314 days",
+        "all_late_orders": 1478,
+        "review_timing_groups": {
+          "before_delivery_day": {
+            "orders": 1370,
+            "coverage_of_all_late_orders_in_band": 0.9269282814614344,
+            "mean_score": 1.5875912408759123,
+            "median_score": 1.0,
+            "score_counts": {
+              "1": 997,
+              "2": 134,
+              "3": 119,
+              "4": 47,
+              "5": 73
+            }
+          },
+          "on_delivery_day": {
+            "orders": 36,
+            "coverage_of_all_late_orders_in_band": 0.02435723951285521,
+            "mean_score": 2.7777777777777777,
+            "median_score": 3.0,
+            "score_counts": {
+              "1": 15,
+              "2": 2,
+              "3": 5,
+              "4": 4,
+              "5": 10
+            }
+          },
+          "after_delivery_day": {
+            "orders": 40,
+            "coverage_of_all_late_orders_in_band": 0.02706359945872801,
+            "mean_score": 3.525,
+            "median_score": 4.0,
+            "score_counts": {
+              "1": 9,
+              "2": 2,
+              "3": 4,
+              "4": 9,
+              "5": 16
+            }
+          },
+          "all_latest_reviews": {
+            "orders": 1446,
+            "coverage_of_all_late_orders_in_band": 0.9783491204330176,
+            "mean_score": 1.6708160442600277,
+            "median_score": 1.0,
+            "score_counts": {
+              "1": 1021,
+              "2": 138,
+              "3": 128,
+              "4": 60,
+              "5": 99
+            }
+          }
+        }
+      },
+      {
+        "delay_band": "15\u201330 days",
+        "all_late_orders": 1039,
+        "review_timing_groups": {
+          "before_delivery_day": {
+            "orders": 993,
+            "coverage_of_all_late_orders_in_band": 0.9557266602502407,
+            "mean_score": 1.594159113796576,
+            "median_score": 1,
+            "score_counts": {
+              "1": 711,
+              "2": 108,
+              "3": 88,
+              "4": 38,
+              "5": 48
+            }
+          },
+          "on_delivery_day": {
+            "orders": 2,
+            "coverage_of_all_late_orders_in_band": 0.0019249278152069298,
+            "mean_score": 2,
+            "median_score": 2.0,
+            "score_counts": {
+              "1": 1,
+              "2": 0,
+              "3": 1,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "after_delivery_day": {
+            "orders": 11,
+            "coverage_of_all_late_orders_in_band": 0.010587102983638113,
+            "mean_score": 3.3636363636363638,
+            "median_score": 3,
+            "score_counts": {
+              "1": 1,
+              "2": 2,
+              "3": 3,
+              "4": 2,
+              "5": 3
+            }
+          },
+          "all_latest_reviews": {
+            "orders": 1006,
+            "coverage_of_all_late_orders_in_band": 0.9682386910490857,
+            "mean_score": 1.614314115308151,
+            "median_score": 1.0,
+            "score_counts": {
+              "1": 713,
+              "2": 110,
+              "3": 92,
+              "4": 40,
+              "5": 51
+            }
+          }
+        }
+      },
+      {
+        "delay_band": "31+ days",
+        "all_late_orders": 345,
+        "review_timing_groups": {
+          "before_delivery_day": {
+            "orders": 322,
+            "coverage_of_all_late_orders_in_band": 0.9333333333333333,
+            "mean_score": 2.049689440993789,
+            "median_score": 1.0,
+            "score_counts": {
+              "1": 204,
+              "2": 15,
+              "3": 29,
+              "4": 31,
+              "5": 43
+            }
+          },
+          "on_delivery_day": {
+            "orders": 1,
+            "coverage_of_all_late_orders_in_band": 0.002898550724637681,
+            "mean_score": 5,
+            "median_score": 5,
+            "score_counts": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 1
+            }
+          },
+          "after_delivery_day": {
+            "orders": 6,
+            "coverage_of_all_late_orders_in_band": 0.017391304347826087,
+            "mean_score": 2,
+            "median_score": 1.0,
+            "score_counts": {
+              "1": 4,
+              "2": 0,
+              "3": 1,
+              "4": 0,
+              "5": 1
+            }
+          },
+          "all_latest_reviews": {
+            "orders": 329,
+            "coverage_of_all_late_orders_in_band": 0.9536231884057971,
+            "mean_score": 2.0577507598784193,
+            "median_score": 1,
+            "score_counts": {
+              "1": 208,
+              "2": 15,
+              "3": 30,
+              "4": 31,
+              "5": 45
+            }
+          }
+        }
+      }
+    ],
+    "limitations": [
+      "Broader timing includes waiting-period opinions, not purely post-delivery experiences.",
+      "Final recorded delay may not yet have been known when an earlier review was submitted.",
+      "Higher review coverage does not establish representativeness or causality.",
+      "No source verification or extreme-case exclusion was performed."
+    ]
+  },
+  "long_delay_comment_cases": [
+    {
+      "order_id": "814fe5df303b0c72aeddb331dbfe9802",
+      "review_id": "8823d39e2b9ef012f2fd6af92d9b11c9",
+      "orders_excel_row": 42458,
+      "reviews_excel_row": 9795,
+      "days_late": 42,
+      "score": 5,
+      "actual_delivery": "2018-07-20T13:41:38.999999952502548675",
+      "answer_timestamp": "2018-07-31T00:42:31.99999997857958325",
+      "title_stored": "nota 10000",
+      "comment_stored": "rapido e eficas"
+    },
+    {
+      "order_id": "c1875eb040541568d58640849b68b052",
+      "review_id": "c18636fae81657b65354a21fdffed916",
+      "orders_excel_row": 33674,
+      "reviews_excel_row": 16260,
+      "days_late": 36,
+      "score": 3,
+      "actual_delivery": "2018-05-11T17:58:46.99999990873038675",
+      "answer_timestamp": "2018-05-14T02:36:58.00000006332993600",
+      "title_stored": "Tempo de espera",
+      "comment_stored": "Produto de \u221a\u2265tima qualidade, chegou como descrito. Mais a entrega foi mais do que o esperado. Deixou a desejar no tempo de entrega. MUITO DEMORA"
+    },
+    {
+      "order_id": "fcf77320278b491829c6e5d767a3f20d",
+      "review_id": "dde5b1627aac00c45fc9081bdba70021",
+      "orders_excel_row": 50888,
+      "reviews_excel_row": 3597,
+      "days_late": 35,
+      "score": 1,
+      "actual_delivery": "2018-01-23T23:13:00.99999984260648775",
+      "answer_timestamp": "2018-01-25T20:00:19.00000025052577425",
+      "title_stored": "",
+      "comment_stored": "O produto demorou cerca de dois meses para chegar. Al\u221a\u00a9m disso, o produto n\u221a\u00a3o cont\u221a\u00a9m as medidas divulgadas no an\u221a\u222bncio. N\u221a\u00a3o recomendo."
+    },
+    {
+      "order_id": "84db939b1ab9686533e9a06a0354beb6",
+      "review_id": "3ad650dcbe0dd0a09359cd3f660b7dec",
+      "orders_excel_row": 23498,
+      "reviews_excel_row": 35101,
+      "days_late": 32,
+      "score": 1,
+      "actual_delivery": "2018-09-17T13:49:04.00000025052577425",
+      "answer_timestamp": "2018-09-22T00:53:13.999999808147550",
+      "title_stored": "atendimento ruim",
+      "comment_stored": "a falta de respeito e considdera\u221a\u00df\u221a\u00a3o para com os clientes, essa perceira da das lannister, sempre comprei com as lannister, mais ultimentente n\u221a\u00a3o recomendo._x000D_"
+    },
+    {
+      "order_id": "8b4fc455b9a8cc1559dca8dd2d392ddd",
+      "review_id": "a1c89ee75aad49c3e5633106fe8b8e82",
+      "orders_excel_row": 23936,
+      "reviews_excel_row": 38253,
+      "days_late": 31,
+      "score": 1,
+      "actual_delivery": "2018-03-11T15:32:36.99999982025474325",
+      "answer_timestamp": "2018-03-27T20:57:52.99999985843897175",
+      "title_stored": "",
+      "comment_stored": "Boa noite minha compra foi realizada h\u221a\u00b0 mais de 3 meses e at\u221a\u00a9 hj nada.Acabou o ver\u221a\u00a3o e minha filha todos os dias pedia a b\u221a\u2265ia de unic\u221a\u2265rnio.Nao recebi o produto."
+    },
+    {
+      "order_id": "f947483d17043c99e4de12dacdbd763a",
+      "review_id": "cb8b1a90fd10aaf7fced5c629cdc9d63",
+      "orders_excel_row": 79395,
+      "reviews_excel_row": 20107,
+      "days_late": 31,
+      "score": 1,
+      "actual_delivery": "2018-03-05T11:59:01.00000003818422850",
+      "answer_timestamp": "2018-09-29T15:57:45.99999989848584225",
+      "title_stored": "",
+      "comment_stored": ""
+    }
+  ],
+  "longest_delay_review": {
+    "selection": "Top 10 assessed late orders by days late; ties ordered by order ID",
+    "records": [
+      {
+        "excel_row": 55621,
+        "order_id": "1b3190b2dfa9d789e1f14c05b647a14a",
+        "days_late": 188,
+        "purchase": "2018-02-23T14:57:35.00000005122274275",
+        "approved": "2018-02-23T15:16:14.00000011548399975",
+        "carrier_handoff": "2018-02-26T18:49:06.999999904073775",
+        "actual_delivery": "2018-09-19T23:24:07.00000025331973725",
+        "estimated_delivery": "2018-03-15",
+        "purchase_to_handoff_days": 3,
+        "handoff_to_delivery_days": 205,
+        "purchase_to_promised_days": 20,
+        "calendar_date_flags": []
+      },
+      {
+        "excel_row": 19592,
+        "order_id": "ca07593549f1816d26a572e06dc1eab6",
+        "days_late": 181,
+        "purchase": "2017-02-21T23:31:27.00000001117587225",
+        "approved": "2017-02-23T02:35:14.99999987427145575",
+        "carrier_handoff": "2017-03-08T13:47:46.00000024773180450",
+        "actual_delivery": "2017-09-19T14:36:39.00000002235174450",
+        "estimated_delivery": "2017-03-22",
+        "purchase_to_handoff_days": 15,
+        "handoff_to_delivery_days": 195,
+        "purchase_to_promised_days": 29,
+        "calendar_date_flags": []
+      },
+      {
+        "excel_row": 11401,
+        "order_id": "47b40429ed8cce3aee9199792275433f",
+        "days_late": 175,
+        "purchase": "2018-01-03T09:44:01.00000003818422850",
+        "approved": "2018-01-03T10:31:14.99999993015081025",
+        "carrier_handoff": "2018-02-06T01:48:28.00000000745058150",
+        "actual_delivery": "2018-07-13T20:51:30.99999982863664575",
+        "estimated_delivery": "2018-01-19",
+        "purchase_to_handoff_days": 34,
+        "handoff_to_delivery_days": 157,
+        "purchase_to_promised_days": 16,
+        "calendar_date_flags": []
+      },
+      {
+        "excel_row": 81403,
+        "order_id": "2fe324febf907e3ea3f2aa9650869fa5",
+        "days_late": 167,
+        "purchase": "2017-03-13T20:17:10.00000021420419450",
+        "approved": "2017-03-13T20:17:10.00000021420419450",
+        "carrier_handoff": "2017-03-17T07:23:52.99999970477074350",
+        "actual_delivery": "2017-09-19T17:00:06.99999995995312950",
+        "estimated_delivery": "2017-04-05",
+        "purchase_to_handoff_days": 4,
+        "handoff_to_delivery_days": 186,
+        "purchase_to_promised_days": 23,
+        "calendar_date_flags": []
+      },
+      {
+        "excel_row": 89132,
+        "order_id": "285ab9426d6982034523a855f55a885e",
+        "days_late": 166,
+        "purchase": "2017-03-08T22:47:40.00000010244548550",
+        "approved": "2017-03-08T22:47:40.00000010244548550",
+        "carrier_handoff": "2017-03-09T08:53:20.00000016298145175",
+        "actual_delivery": "2017-09-19T14:00:03.9999998873099700",
+        "estimated_delivery": "2017-04-06",
+        "purchase_to_handoff_days": 1,
+        "handoff_to_delivery_days": 194,
+        "purchase_to_promised_days": 29,
+        "calendar_date_flags": []
+      },
+      {
+        "excel_row": 61612,
+        "order_id": "440d0d17af552815d15a9e41abe49359",
+        "days_late": 165,
+        "purchase": "2017-03-07T23:59:50.99999978207051475",
+        "approved": "2017-03-09T01:11:33.00000022631138775",
+        "carrier_handoff": "2017-03-15T13:00:07.9999997746199400",
+        "actual_delivery": "2017-09-19T15:12:50.00000020489096425",
+        "estimated_delivery": "2017-04-07",
+        "purchase_to_handoff_days": 8,
+        "handoff_to_delivery_days": 188,
+        "purchase_to_promised_days": 31,
+        "calendar_date_flags": []
+      },
+      {
+        "excel_row": 68771,
+        "order_id": "c27815f7e3dd0b926b58552628481575",
+        "days_late": 162,
+        "purchase": "2017-03-15T23:23:16.99999988079070950",
+        "approved": "2017-03-15T23:23:16.99999988079070950",
+        "carrier_handoff": "2017-03-21T14:50:25.00000011641532075",
+        "actual_delivery": "2017-09-19T17:14:24.99999999068677650",
+        "estimated_delivery": "2017-04-10",
+        "purchase_to_handoff_days": 6,
+        "handoff_to_delivery_days": 182,
+        "purchase_to_promised_days": 26,
+        "calendar_date_flags": []
+      },
+      {
+        "excel_row": 38511,
+        "order_id": "0f4519c5f1c541ddec9f21b3bddd533a",
+        "days_late": 161,
+        "purchase": "2017-03-09T13:26:56.99999996926635300",
+        "approved": "2017-03-09T13:26:56.99999996926635300",
+        "carrier_handoff": "2017-03-22T05:28:14.00000015739351225",
+        "actual_delivery": "2017-09-19T14:38:20.999999977648258200",
+        "estimated_delivery": "2017-04-11",
+        "purchase_to_handoff_days": 13,
+        "handoff_to_delivery_days": 181,
+        "purchase_to_promised_days": 33,
+        "calendar_date_flags": []
+      },
+      {
+        "excel_row": 40849,
+        "order_id": "d24e8541128cea179a11a65176e0a96f",
+        "days_late": 161,
+        "purchase": "2017-06-12T13:14:11.0000000707805175",
+        "approved": "2017-06-12T13:25:10.99999970756471325",
+        "carrier_handoff": "2017-06-16T14:44:36.99999986216425575",
+        "actual_delivery": "2017-12-04T18:36:28.99999998975544875",
+        "estimated_delivery": "2017-06-26",
+        "purchase_to_handoff_days": 4,
+        "handoff_to_delivery_days": 171,
+        "purchase_to_promised_days": 14,
+        "calendar_date_flags": []
+      },
+      {
+        "excel_row": 54482,
+        "order_id": "2d7561026d542c8dbd8f0daeadf67a43",
+        "days_late": 159,
+        "purchase": "2017-03-15T11:24:26.99999989941716325",
+        "approved": "2017-03-15T11:24:26.99999989941716325",
+        "carrier_handoff": "2017-03-16T09:29:15.99999998230487400",
+        "actual_delivery": "2017-09-19T14:38:17.999999905005097350",
+        "estimated_delivery": "2017-04-13",
+        "purchase_to_handoff_days": 1,
+        "handoff_to_delivery_days": 187,
+        "purchase_to_promised_days": 29,
+        "calendar_date_flags": []
+      }
+    ],
+    "recorded_delivery_date_counts": {
+      "2017-09-19": 7,
+      "2017-12-04": 1,
+      "2018-07-13": 1,
+      "2018-09-19": 1
+    },
+    "limitations": [
+      "Calendar-date checks only; no within-day chronology validation.",
+      "Selection prioritizes extremes and is not representative of all late orders.",
+      "Intervals reflect recorded timestamps, not verified operational responsibility."
+    ]
+  },
+  "tables": [
+    {
+      "name": "OrdersData",
+      "range": "A1:K99442",
+      "filter_xml": "<ns0:autoFilter xmlns:ns0=\"http://purl.oclc.org/ooxml/spreadsheetml/main\" ref=\"A1:K99442\"><ns0:filterColumn colId=\"2\"><ns0:filters><ns0:filter val=\"delivered\" /></ns0:filters></ns0:filterColumn><ns0:filterColumn colId=\"6\"><ns0:customFilters><ns0:customFilter operator=\"notEqual\" val=\" \" /></ns0:customFilters></ns0:filterColumn></ns0:autoFilter>"
+    },
+    {
+      "name": "ReviewsData",
+      "range": "A1:G99225",
+      "filter_xml": "<ns0:autoFilter xmlns:ns0=\"http://purl.oclc.org/ooxml/spreadsheetml/main\" ref=\"A1:G99225\" />"
+    }
+  ],
+  "notes": [
+    "Rows with cells may include formatting-only rows.",
+    "First rows show stored values, not recalculated results.",
+    "Excel numeric dates require interpretation using cell formats."
+  ]
+}

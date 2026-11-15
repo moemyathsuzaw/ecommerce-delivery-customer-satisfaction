@@ -1,0 +1,2 @@
+# Chart rendering; the workbook inventory uses Python's standard library only.
+matplotlib==3.8.0
